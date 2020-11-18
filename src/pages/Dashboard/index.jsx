@@ -20,7 +20,7 @@ const Dashboard = () => {
       dataIndex: 'total',
       key: 'total',
       render: (text) => {
-        return dinheiro(text, 'R$');
+        return dinheiro(text, '$');
       },
     },
   ];
@@ -37,7 +37,7 @@ const Dashboard = () => {
       dataIndex: 'quotation',
       key: 'quotation',
       render: (text) => {
-        return dinheiro(text, 'R$');
+        return dinheiro(text, '$');
       },
     },
     {
@@ -45,7 +45,7 @@ const Dashboard = () => {
       dataIndex: 'total',
       key: 'total',
       render: (text) => {
-        return dinheiro(text, 'R$');
+        return dinheiro(text, '$');
       },
     },
   ];
