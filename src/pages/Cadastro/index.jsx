@@ -49,6 +49,22 @@ const Cadastro = () => {
       `/alpha-vantage/global-quote?stock=${stock}`,
     );
 
+    const { note } = response.data?.data;
+
+    if (note) {
+      notification.warning({
+        key: 'alertRateLimit',
+        duration: 10,
+        message: 'Aviso - Rate Limit',
+        description: note || 'API com Rate',
+        style: {
+          color: '#856404',
+          backgroundColor: '#fff3cd',
+          bordercolor: '#ffeeba',
+        },
+      });
+    }
+
     return response.data?.data?.globalQuote || {};
   }, []);
 
